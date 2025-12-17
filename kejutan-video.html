@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kotak Rahasia</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #222;
+        color: white;
+        font-family: Arial;
+    }
+
+    .box {
+        width: 220px;
+        padding: 15px;
+        background: red;
+        text-align: center;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    video {
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="box" onclick="playVideo()">
+    ⚠️ JANGAN DIKLIK
+    <video id="vid" controls>
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+function playVideo() {
+    let v = document.getElementById("vid");
+    v.style.display = "block";
+    v.play();
+}
+</script>
+
+</body>
+</html>
