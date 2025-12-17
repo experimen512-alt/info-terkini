@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Kotak Rahasia</title>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #222;
-        color: white;
-        font-family: Arial;
-    }
+    <meta charset="UTF-8">
+    <title>Kotak Misterius</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
 
-    .box {
-        width: 220px;
-        padding: 15px;
-        background: red;
-        text-align: center;
-        border-radius: 12px;
-        cursor: pointer;
-    }
+        .box {
+            width: 200px;
+            padding: 20px;
+            background: #ffcc00;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
 
-    video {
-        width: 100%;
-        margin-top: 10px;
-        display: none;
-        border-radius: 10px;
-    }
-</style>
+        .content {
+            display: none;
+            margin-top: 15px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="box" onclick="playVideo()">
-    ⚠️ JANGAN DIKLIK
-    <video id="vid" controls>
-        <source src="vid.mp4" type="video/mp4">
-    </video>
+<div class="box" onclick="buka()">
+    😁 Klik Aku!
+    <div class="content" id="isi">
+        🤣 KENA PRANK!  
+        <br>  
+        Kamu barusan klik kotak iseng!
+    </div>
 </div>
 
 <script>
-function playVideo() {
-    let v = document.getElementById("vid");
-    v.style.display = "block";
-    v.play();
+function buka() {
+    document.getElementById('isi').style.display = 'block';
 }
 </script>
 
